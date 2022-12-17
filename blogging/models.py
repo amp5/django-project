@@ -16,7 +16,7 @@ class Post(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=128)
     description = models.TextField(blank=True)
-    posts = models.ForeignKey(Post, on_delete=models.CASCADE, null=True)
+    posts = models.ForeignKey(Post, on_delete=models.CASCADE, null=True) # issue with this
 
     def __str__(self):
         return self.name
